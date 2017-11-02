@@ -948,8 +948,8 @@ along with this program.  If not, see
                 .off(click)
                 .on(click, $proxy(this._addToYears, this, AMOUNT_TO_ADD));
 
-            _setDisabled(this._prevButton, _minYear && (_firstYear - 1) < _minYear);
-            _setDisabled(this._nextButton, _maxYear && (_firstYear + 12) -1 > _maxYear);
+            _setDisabled(this._prevButton, !!_minYear && (_firstYear - 1) < _minYear);
+            _setDisabled(this._nextButton, !!_maxYear && (_firstYear + 12) -1 > _maxYear);
 
             this._buttons.off(_eventsNs);
 
@@ -1030,8 +1030,8 @@ along with this program.  If not, see
             }
 
             // Disable the next/prev button if we've reached the min/max year.
-            _setDisabled(this._prevButton,  _minDate && _curYear == _toYear(_minDate));
-            _setDisabled(this._nextButton,  _maxDate && _curYear == _toYear(_maxDate));
+            _setDisabled(this._prevButton, !!_minDate && _curYear === _toYear(_minDate));
+            _setDisabled(this._nextButton, !!_maxDate && _curYear === _toYear(_maxDate));
 
             for (var i = 0; i < 12; i++) {
                 // Disable the button if the month is not between the
@@ -1040,7 +1040,7 @@ along with this program.  If not, see
 
                 $(this._buttons[i])
                     .jqueryUIButton({ disabled: !_isBetween })
-                    .toggleClass(_todayClass, _isBetween && _month == _todaysMonth); // Highlights today's month.
+                    .toggleClass(_todayClass, _isBetween && _month === _todaysMonth); // Highlights today's month.
             }
         }
     });
