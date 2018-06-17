@@ -1,8 +1,7 @@
 <h1>The jQuery UI Month Picker</h1>
 
-[![Build Status](https://travis-ci.org/KidSysco/jquery-ui-month-picker.svg?branch=master)](https://travis-ci.org/KidSysco/jquery-ui-month-picker)
-[![Bower](https://img.shields.io/bower/v/jquery-ui-month-picker.svg)](https://github.com/KidSysco/jquery-ui-month-picker/wiki#installation)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![NPM Stable Version][npm-stable-version-image]][npm-url]
+[![Build Status][travis-master-image]][travis-url]
 
 <p>
  <b>jQuery UI Month Picker Home Page</b><br>
@@ -28,3 +27,11 @@
  <b>Repo Maintenance and Gopher</b><br>
  <a href="https://github.com/KidSysco">Ryan Segura</a>
 </p>
+
+
+
+
+[npm-stable-version-image]: https://img.shields.io/npm/v/@amokrushin/jquery-ui-month-picker.svg
+[npm-url]: https://npmjs.com/package/@amokrushin/jquery-ui-month-picker
+[travis-master-image]: https://img.shields.io/travis/amokrushin/jquery-ui-month-picker/master.svg
+[travis-url]: https://travis-ci.org/amokrushin/jquery-ui-month-picker

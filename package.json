@@ -1,19 +1,33 @@
 {
-  "name": "jquery-ui-month-picker",
+  "name": "@amokrushin/jquery-ui-month-picker",
+  "version": "3.0.5",
   "description": "jQuery UI Month Picker Plugin",
-  "version": "3.0.4",
+  "repository": "https://github.com/amokrushin/jquery-ui-month-picker",
   "license": "GPL-3.0",
-  "repository": "https://github.com/KidSysco/jquery-ui-month-picker.git",
+  "files": [
+    "src"
+  ],
+  "main": "src/MonthPicker.js",
   "scripts": {
-    "test": "grunt test",
-    "postinstall": "bower install"
+    "bower:install": "bower install",
+    "grunt:test": "grunt test",
+    "test": "run-s bower:install grunt:test",
+    "preversion": "run-s test"
   },
   "devDependencies": {
-    "bower": "",
-    "grunt": "^1.0.1",
-    "grunt-contrib-cssmin": "^0.14.0",
-    "grunt-contrib-qunit": "^0.6.0",
-    "grunt-contrib-uglify": "~0.6.0",
-    "grunt-gh-pages": "^1.0.0"
+    "bower": "^1.8.4",
+    "grunt": "^1.0.3",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-qunit": "^2.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-gh-pages": "^1.0.0",
+    "npm-run-all": "^4.1.3"
+  },
+  "peerDependencies": {
+    "jquery": ">=1.9.1",
+    "jquery-ui": ">=1.9.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

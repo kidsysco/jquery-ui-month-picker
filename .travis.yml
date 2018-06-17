@@ -1,5 +1,13 @@
 language: node_js
 node_js:
-  - "5.10.1"
-before_install: npm install -g grunt-cli
+  - 6
+  - 10
 install: npm install
+deploy:
+  provider: npm
+  email: anton@mokr.org
+  api_key:
+    secure: pWW71jsBH9SOkWOsqG0Jh+JrVWymEwIEsQAGj+UuquMab9bbm0f/PfUCUgkFOJwWUaBGTR0yvjQ6+CqEEJG9Oaetn0jV3hWmsEfnj7//vlaIhgIQmFxxPmpuNYNTmt+lj5zSmFXmqp74HXGfka0snKkUi0yDlanPGlvea1o9U0S9LAxRrm3jS3VbNAlVLLBar6oGShXzjNR/1sxHLlrVfwPNIkEcty9P7CIusb5tUlBJwJhDSF9etNBbOIgSUCLC4h6hTOocBgOg7dswU76BfvEb3FI68duDaPtydJDF3MAkhTDe6MBX8liBlv76Onfqm+LJftwU4Z3rkNESSTytu8rcNb2QH5DePF0HHbAleFBn0PDNRQ6TCr4ini3jdpHF5UMMHYwA7h2+hHU5zNfGuxDtRyy5zj++HTliWlqJlwvx8LQhBQ9h3u/IRs+VbAdUuISlEMUKsa5dVZ9jhvF8ZWM8FCVibzq8I/7eayPgAqbkzYKQNV2cgQjbPG7WKclETgKD8bFsXH1ZIeWBvC+h6nkUkaybdvf+i/KsY83PZfvGAknhjYj72VA5pQWXONvdMYzi/tvW6Q4q2XFcXPdbz+x/YEmXbD21gj2kFpy2WTDtzk1WNTOsmKLW1i4EsKDdC4281yI1eLhS2wJ1/oy9ELYIXXNivCSZGjsgNc1D+Bw=
+  on:
+    tags: true
+    repo: amokrushin/jquery-ui-month-picker
