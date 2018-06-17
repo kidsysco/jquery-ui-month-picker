@@ -5,8 +5,9 @@
   "license": "GPL-3.0",
   "repository": "https://github.com/KidSysco/jquery-ui-month-picker.git",
   "scripts": {
-    "test": "grunt test",
-    "postinstall": "bower install"
+    "test": "run-s bower:install grunt:test",
+    "bower:install": "bower install",
+    "grunt:test": "grunt test"
   },
   "devDependencies": {
     "bower": "",
@@ -14,6 +15,7 @@
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-qunit": "^0.6.0",
     "grunt-contrib-uglify": "~0.6.0",
-    "grunt-gh-pages": "^1.0.0"
+    "grunt-gh-pages": "^1.0.0",
+    "npm-run-all": "^4.1.3"
   }
 }
